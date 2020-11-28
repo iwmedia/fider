@@ -1,7 +1,7 @@
 subject: Sign in to {{ .tenantName }}
 body:
 <tr>
-  <td>Click the link below to sign in to <strong>{{ .tenantName }}</strong>.</td>
+  <td>Klicken Sie auf den folgenden Link, um sich bei <strong>{{ .tenantName }}</strong> anzumelden.</td>
 </tr>
 <tr>
   <td height="20">&nbsp;</td>
@@ -11,6 +11,6 @@ body:
 </tr>
 <tr>
   <td>
-    <span style="color:#666;font-size:11px">This link will expire in 30 minutes and can only be used once.</span>
+    <span style="color:#666;font-size:11px">Dieser Link läuft in 30 Minuten ab und kann nur einmal verwendet werden.</span>
   </td>
 </tr>
