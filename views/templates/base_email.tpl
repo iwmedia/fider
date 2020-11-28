@@ -29,7 +29,7 @@
 			</tr>
 			<tr>
 				<td>
-					<span style="color:#666;font-size:11px">This email was sent from a notification-only address that cannot accept incoming email. Please do not reply to this message.</span>
+					<span style="color:#666;font-size:11px">Diese E-Mail wurde von einer Benachrichtigungsadresse gesendet, die eingehende E-Mails nicht akzeptieren kann. Bitte antworten Sie nicht auf diese Nachricht.</span>
 				</td>
 			</tr>
 			<tr>
