@@ -3,11 +3,11 @@
 {{define "content"}}
   <div class="container failure-page">
     <img src="{{ .private.logo }}"/>
-    <h1>EXPIRED</h1>
-    <p>The link you clicked has expired.</p>
+    <h1>ABGELAUFEN</h1>
+    <p>Der Link, auf den Sie geklickt haben, ist abgelaufen.</p>
 
     {{ if .public.tenant }}
-      <span>Take me back to <a href="{{ .public.settings.baseURL }}">{{ .public.settings.baseURL }}</a> home page.</span>
+      <span>Bring mich zurück zur <a href="{{ .public.settings.baseURL }}">{{ .public.settings.baseURL }}</a> Homepage.</span>
     {{ end }}
   </div>
 {{end}}

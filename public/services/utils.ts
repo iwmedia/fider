@@ -18,18 +18,18 @@ export const classSet = (input?: any): string => {
 };
 
 const monthNames = [
-  "January",
-  "February",
-  "March",
+  "Januar",
+  "Februar",
+  "März",
   "April",
-  "May",
-  "June",
-  "July",
+  "Mai",
+  "Juni",
+  "Juli",
   "August",
   "September",
-  "October",
+  "Oktober",
   "November",
-  "December"
+  "Dezember"
 ];
 
 export const currencySymbol = (currencyCode: string): string => {
@@ -66,17 +66,17 @@ export const formatDate = (input: Date | string, format: DateFormat = "full"): s
 };
 
 const templates: { [key: string]: string } = {
-  seconds: "less than a minute",
-  minute: "about a minute",
-  minutes: "%d minutes",
-  hour: "about an hour",
-  hours: "about %d hours",
-  day: "a day",
-  days: "%d days",
-  month: "about a month",
-  months: "%d months",
-  year: "about a year",
-  years: "%d years"
+  seconds: "weniger als einer Minute",
+  minute: "eine Minute",
+  minutes: "%d Minuten",
+  hour: "ungefähr eine Stunde",
+  hours: "ungefähr %d Stunden",
+  day: "ein Tag",
+  days: "%d Tage",
+  month: "ungefähr vor einem Monat",
+  months: "%d Monate",
+  year: "ungefähr ein Jahr",
+  years: "%d Jahre"
 };
 
 const template = (t: string, n: number): string => {

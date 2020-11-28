@@ -3,13 +3,13 @@
 {{define "content"}}
   <div class="container failure-page">
     <img src="{{ .private.logo }}"/>
-    <h1>NOT AUTHORIZED</h1>
+    <h1>NICHT GENEHMIGT</h1>
     <p>
-      You are not authorized to view this page.
+      Sie sind nicht berechtigt, diese Seite anzuzeigen.
     </p>
 
     {{ if .public.tenant }}
-      <span>Take me back to <a href="{{ .public.settings.baseURL }}">{{ .public.settings.baseURL }}</a> home page.</span>
+      <span>Bring mich zurück zur <a href="{{ .public.settings.baseURL }}">{{ .public.settings.baseURL }}</a> Homepage.</span>
     {{ end }}
   </div>
 {{end}}

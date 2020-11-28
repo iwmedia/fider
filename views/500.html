@@ -4,10 +4,10 @@
   <div class="container failure-page">
     <img src="{{ .private.logo }}"/>
     <h1>Shoot! Well, this is unexpected…</h1>
-    <p>An error has occurred and we're working to fix the problem! </br> We’ll be up and running shortly.</p>
+    <p>Ein Fehler ist aufgetreten und wir arbeiten daran, das Problem zu beheben! </br> Wir werden in Kürze einsatzbereit sein.</p>
 
     {{ if .public.tenant }}
-      <span>Take me back to <a href="{{ .public.settings.baseURL }}">{{ .public.settings.baseURL }}</a> home page.</span>
+      <span>Bring mich zurück zur <a href="{{ .public.settings.baseURL }}">{{ .public.settings.baseURL }}</a> Homepage.</span>
     {{ end }}
   </div>
 {{end}}

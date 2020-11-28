@@ -225,8 +225,8 @@ func (c *Context) NotFound() error {
 //Gone returns a 410 page
 func (c *Context) Gone() error {
 	return c.Render(http.StatusGone, "410.html", Props{
-		Title:       "Expired",
-		Description: "The link you clicked has expired.",
+		Title:       "Abgelaufen",
+		Description: "Dieser Link ist abgelaufen",
 	})
 }
 

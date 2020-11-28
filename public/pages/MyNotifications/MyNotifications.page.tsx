@@ -71,7 +71,7 @@ export default class MyNotificationsPage extends React.Component<MyNotifications
         </h4>
         <List>
           {this.state.unread.length > 0 && this.items(this.state.unread)}
-          {this.state.unread.length === 0 && <span className="info">No unread notifications.</span>}
+          {this.state.unread.length === 0 && <span className="info">Keine ungelesenen Benachrichtigungen.</span>}
         </List>
         {this.state.recent.length > 0 && (
           <>

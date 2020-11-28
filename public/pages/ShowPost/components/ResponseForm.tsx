@@ -109,10 +109,10 @@ export class ResponseForm extends React.Component<ResponseFormProps, ResponseFor
 
         <Modal.Footer>
           <Button color="positive" onClick={this.submit}>
-            Submit
+            Bestätigen
           </Button>
           <Button color="cancel" onClick={this.closeModal}>
-            Cancel
+            Abbrechen
           </Button>
         </Modal.Footer>
       </Modal.Window>
