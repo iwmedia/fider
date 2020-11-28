@@ -25,13 +25,13 @@ export class PostStatus {
     public filterable: boolean
   ) {}
 
-  public static Open = new PostStatus("Open", "open", false, false, false);
-  public static Planned = new PostStatus("Planned", "planned", true, false, true);
-  public static Started = new PostStatus("Started", "started", true, false, true);
-  public static Completed = new PostStatus("Completed", "completed", true, true, true);
-  public static Declined = new PostStatus("Declined", "declined", true, true, true);
-  public static Duplicate = new PostStatus("Duplicate", "duplicate", true, true, false);
-  public static Deleted = new PostStatus("Deleted", "deleted", false, true, false);
+  public static Open = new PostStatus("Offen", "open", false, false, false);
+  public static Planned = new PostStatus("Geplannt", "planned", true, false, true);
+  public static Started = new PostStatus("Gestartet", "started", true, false, true);
+  public static Completed = new PostStatus("Abgeschlossen", "completed", true, true, true);
+  public static Declined = new PostStatus("Abgelehnt", "declined", true, true, true);
+  public static Duplicate = new PostStatus("Duplikat", "duplicate", true, true, false);
+  public static Deleted = new PostStatus("Gelöscht", "deleted", false, true, false);
 
   public static Get(value: string): PostStatus {
     for (const status of PostStatus.All) {
