@@ -3,14 +3,14 @@
 {{define "content"}}
   <div class="container failure-page">
     <img src="{{ .private.logo }}"/>
-    <h1>PAGE NOT FOUND</h1>
+    <h1>SEITE NICHT GEFUNDEN</h1>
     <p>
-      The link you clicked may be broken or <br />
-      the page may have been removed.
+      Der Link, auf den Sie geklickt haben, ist möglicherweise defekt oder<br />
+      die Seite wurde möglicherweise entfernt
     </p>
 
     {{ if .public.tenant }}
-      <span>Take me back to <a href="{{ .public.settings.baseURL }}">{{ .public.settings.baseURL }}</a> home page.</span>
+      <span>Bring mich zurück zur <a href="{{ .public.settings.baseURL }}">{{ .public.settings.baseURL }}</a> Homepage.</span>
     {{ end }}
   </div>
 {{end}}

@@ -118,8 +118,8 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
           <Modal.Content>
             <div>
               <p>
-                We have just sent a confirmation link to <b>{this.state.newEmail}</b>. <br /> Click the link to update
-                your email.
+                Wir haben eine Bestätigungslink an <b>{this.state.newEmail}</b> gesendet. <br /> Klicke den Link zum
+                dein Account freizuschalten.
               </p>
               <p>
                 <a href="#" onClick={this.closeModal}>
@@ -130,7 +130,7 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
           </Modal.Content>
         </Modal.Window>
 
-        <Heading title="Settings" subtitle="Manage your profile settings" icon={FaRegAddressCard} />
+        <Heading title="Settings" subtitle="Verwalte deine Profileinstellungen" icon={FaRegAddressCard} />
 
         <div className="row">
           <div className="col-lg-7">
@@ -146,8 +146,8 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
               >
                 <p className="info">
                   {Fider.session.user.email || this.state.changingEmail
-                    ? "Your email is private and will never be publicly displayed."
-                    : "Your account doesn't have an email."}
+                    ? "Deine E-Mail ist privat und wird niemalds öffentlich angezeigt."
+                    : "Dein Konto hat keine E-Mail"}
                 </p>
                 {this.state.changingEmail && (
                   <>

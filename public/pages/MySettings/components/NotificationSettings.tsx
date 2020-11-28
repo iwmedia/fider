@@ -48,25 +48,25 @@ export const NotificationSettings = (props: NotificationSettingsProps) => {
     if (!webEnabled && !emailEnabled) {
       return (
         <p className="info">
-          You'll <strong>NOT</strong> receive any notification about this event.
+          Du erhältst <strong>KEINE</strong> Benachrichtigungen über dieses Ereignis.
         </p>
       );
     } else if (webEnabled && !emailEnabled) {
       return (
         <p className="info">
-          You'll receive <strong>web</strong> notifications about {about}.
+          Du erhältst <strong>web</strong> Benachrichtigungen über {about}.
         </p>
       );
     } else if (!webEnabled && emailEnabled) {
       return (
         <p className="info">
-          You'll receive <strong>email</strong> notifications about {about}.
+           Du erhältst <strong>E-Mail</strong> Benachrichtigungen über {about}.
         </p>
       );
     } else if (webEnabled && emailEnabled) {
       return (
         <p className="info">
-          You'll receive <strong>web</strong> and <strong>email</strong> notifications about {about}.
+          Du erhältst <strong>web</strong> und <strong>E-Mail</strong> Benachrichtigungen über  {about}.
         </p>
       );
     }
@@ -76,13 +76,13 @@ export const NotificationSettings = (props: NotificationSettingsProps) => {
   return (
     <>
       <Field label="Notifications">
-        <p className="info">Use following panel to choose which events you'd like to receive notification</p>
+        <p className="info">Verwenden Sie das folgende Fenster, um auszuwählen, welche Ereignisse Sie benachrichtigen möchten</p>
       </Field>
 
       <div className="notifications-settings">
         <Segments>
           <Segment>
-            <span className="event-title">New Post</span>
+            <span className="event-title">Neuer Beitrag</span>
             {info("event_notification_new_post", "new posts on this site", "new posts on this site")}
             <p>
               {icon("event_notification_new_post", WebChannel)}
@@ -90,7 +90,7 @@ export const NotificationSettings = (props: NotificationSettingsProps) => {
             </p>
           </Segment>
           <Segment>
-            <span className="event-title">Discussion</span>
+            <span className="event-title">Diskussion</span>
             {info(
               "event_notification_new_comment",
               "comments on posts you've subscribed to",
@@ -102,7 +102,7 @@ export const NotificationSettings = (props: NotificationSettingsProps) => {
             </p>
           </Segment>
           <Segment>
-            <span className="event-title">Status Changed</span>
+            <span className="event-title">Status geändert</span>
             {info(
               "event_notification_change_status",
               "status change on posts you've subscribed to",

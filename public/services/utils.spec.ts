@@ -51,14 +51,14 @@ import { readFileSync } from "fs";
 });
 
 [
-  { input: new Date(2018, 4, 27, 19, 51, 9), expected: "less than a minute ago" },
-  { input: new Date(2018, 4, 27, 10, 12, 59), expected: "about 10 hours ago" },
-  { input: new Date(2018, 4, 26, 10, 12, 59), expected: "a day ago" },
-  { input: new Date(2018, 4, 22, 10, 12, 59), expected: "5 days ago" },
-  { input: new Date(2018, 3, 22, 10, 12, 59), expected: "about a month ago" },
-  { input: new Date(2018, 2, 22, 10, 12, 59), expected: "2 months ago" },
-  { input: new Date(2017, 3, 22, 10, 12, 59), expected: "about a year ago" },
-  { input: new Date(2013, 3, 22, 10, 12, 59), expected: "5 years ago" }
+  { input: new Date(2018, 4, 27, 19, 51, 9), expected: "vor weniger als einer Minute" },
+  { input: new Date(2018, 4, 27, 10, 12, 59), expected: "vor ungefähr 10 Stunden" },
+  { input: new Date(2018, 4, 26, 10, 12, 59), expected: "vor einem Tag" },
+  { input: new Date(2018, 4, 22, 10, 12, 59), expected: "vor 5 Tagen" },
+  { input: new Date(2018, 3, 22, 10, 12, 59), expected: "vor ungefähr einem Monat" },
+  { input: new Date(2018, 2, 22, 10, 12, 59), expected: "vor 2 Monaten" },
+  { input: new Date(2017, 3, 22, 10, 12, 59), expected: "vor etwa einem Jahr" },
+  { input: new Date(2013, 3, 22, 10, 12, 59), expected: "vor 5 Jahren" }
 ].forEach(x => {
   test(`timeSince ${x.input} should be ${x.expected}`, () => {
     const now = new Date(2018, 4, 27, 19, 51, 10);
@@ -68,14 +68,14 @@ import { readFileSync } from "fs";
 });
 
 [
-  { input: new Date(2018, 4, 27, 19, 51, 9), expected: "less than a minute ago" },
-  { input: new Date(2018, 4, 27, 10, 12, 59), expected: "about 10 hours ago" },
-  { input: new Date(2018, 4, 26, 10, 12, 59), expected: "a day ago" },
-  { input: new Date(2018, 4, 22, 10, 12, 59), expected: "5 days ago" },
-  { input: new Date(2018, 3, 22, 10, 12, 59), expected: "about a month ago" },
-  { input: new Date(2018, 2, 22, 10, 12, 59), expected: "2 months ago" },
-  { input: new Date(2017, 3, 22, 10, 12, 59), expected: "about a year ago" },
-  { input: new Date(2013, 3, 22, 10, 12, 59), expected: "5 years ago" }
+  { input: new Date(2018, 4, 27, 19, 51, 9), expected: "vor weniger als einer Minute" },
+  { input: new Date(2018, 4, 27, 10, 12, 59), expected: "vor ungefähr 10 Stunden" },
+  { input: new Date(2018, 4, 26, 10, 12, 59), expected: "vor einem Tag" },
+  { input: new Date(2018, 4, 22, 10, 12, 59), expected: "vor 5 Tagen" },
+  { input: new Date(2018, 3, 22, 10, 12, 59), expected: "vor ungefähr einem Monat" },
+  { input: new Date(2018, 2, 22, 10, 12, 59), expected: "vor 2 Monaten" },
+  { input: new Date(2017, 3, 22, 10, 12, 59), expected: "vor etwa einem Jahr" },
+  { input: new Date(2013, 3, 22, 10, 12, 59), expected: "vor 5 Jahren" }
 ].forEach(x => {
   test(`timeSince ${x.input} should be ${x.expected}`, () => {
     const now = new Date(2018, 4, 27, 19, 51, 10);

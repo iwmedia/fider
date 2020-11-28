@@ -52,7 +52,7 @@ export const Header = () => {
         <div key={5} className="c-menu-user-divider" />
       ]}
       <a href="/signout?redirect=/" className="c-menu-user-item signout">
-        Sign out
+        Abmelden
       </a>
     </div>
   );

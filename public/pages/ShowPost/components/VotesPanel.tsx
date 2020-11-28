@@ -46,7 +46,7 @@ export const VotesPanel = (props: VotesPanelProps) => {
         )}
         {props.votes.length > 0 && extraVotesCount === 0 && canShowAll() && (
           <span onClick={openModal} className={moreVotesClassName}>
-            see details
+            Sehe Details
           </span>
         )}
         {props.votes.length === 0 && <span className="info">None yet</span>}

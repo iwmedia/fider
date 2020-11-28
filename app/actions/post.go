@@ -35,17 +35,17 @@ func (input *CreateNewPost) Validate(ctx context.Context, user *models.User) *va
 	result := validate.Success()
 
 	if input.Model.Title == "" {
-		result.AddFieldFailure("title", "Title is required.")
+		result.AddFieldFailure("title", "Titel ist erforderlich.")
 	} else if len(input.Model.Title) < 10 {
-		result.AddFieldFailure("title", "Title needs to be more descriptive.")
+		result.AddFieldFailure("title", "Der Titel muss aussagekräftiger sein.")
 	} else if len(input.Model.Title) > 100 {
-		result.AddFieldFailure("title", "Title must have less than 100 characters.")
+		result.AddFieldFailure("title", "Der Titel muss weniger als 100 Zeichen enthalten.")
 	} else {
 		err := bus.Dispatch(ctx, &query.GetPostBySlug{Slug: slug.Make(input.Model.Title)})
 		if err != nil && errors.Cause(err) != app.ErrNotFound {
 			return validate.Error(err)
 		} else if err == nil {
-			result.AddFieldFailure("title", "This has already been posted before.")
+			result.AddFieldFailure("title", "Dies wurde bereits zuvor gepostet.")
 		}
 	}
 
@@ -84,13 +84,13 @@ func (input *UpdatePost) Validate(ctx context.Context, user *models.User) *valid
 	result := validate.Success()
 
 	if input.Model.Title == "" {
-		result.AddFieldFailure("title", "Title is required.")
+		result.AddFieldFailure("title", "Titel ist erforderlich.")
 	} else if len(input.Model.Title) < 10 {
-		result.AddFieldFailure("title", "Title needs to be more descriptive.")
+		result.AddFieldFailure("title", "Der Titel muss aussagekräftiger sein.")
 	}
 
 	if len(input.Model.Title) > 100 {
-		result.AddFieldFailure("title", "Title must have less than 100 characters.")
+		result.AddFieldFailure("title", "Der Titel muss weniger als 100 Zeichen enthalten.")
 	}
 
 	postByNumber := &query.GetPostByNumber{Number: input.Model.Number}
@@ -105,7 +105,7 @@ func (input *UpdatePost) Validate(ctx context.Context, user *models.User) *valid
 	if err != nil && errors.Cause(err) != app.ErrNotFound {
 		return validate.Error(err)
 	} else if err == nil && postBySlug.Result.ID != input.Post.ID {
-		result.AddFieldFailure("title", "This has already been posted before.")
+		result.AddFieldFailure("title", "Dies wurde bereits zuvor gepostet.")
 	}
 
 	if len(input.Model.Attachments) > 0 {
@@ -188,19 +188,19 @@ func (input *SetResponse) Validate(ctx context.Context, user *models.User) *vali
 	result := validate.Success()
 
 	if input.Model.Status < enum.PostOpen || input.Model.Status > enum.PostDuplicate {
-		result.AddFieldFailure("status", "Status is invalid.")
+		result.AddFieldFailure("status", "Der Status ist ungültig.")
 	}
 
 	if input.Model.Status == enum.PostDuplicate {
 		if input.Model.OriginalNumber == input.Model.Number {
-			result.AddFieldFailure("originalNumber", "Cannot be a duplicate of itself")
+			result.AddFieldFailure("originalNumber", "Kann kein Duplikat von sich sein")
 		}
 
 		getOriginaPost := &query.GetPostByNumber{Number: input.Model.OriginalNumber}
 		err := bus.Dispatch(ctx, getOriginaPost)
 		if err != nil {
 			if errors.Cause(err) == app.ErrNotFound {
-				result.AddFieldFailure("originalNumber", "Original post not found")
+				result.AddFieldFailure("originalNumber", "Originalbeitrag nicht gefunden")
 			} else {
 				return validate.Error(err)
 			}
@@ -246,7 +246,7 @@ func (input *DeletePost) Validate(ctx context.Context, user *models.User) *valid
 	}
 
 	if isReferencedQuery.Result {
-		return validate.Failed("This post cannot be deleted because it's being referenced by a duplicated post.")
+		return validate.Failed("Dieser Beitrag kann nicht gelöscht werden, da er von einem doppelten Beitrag referenziert wird.")
 	}
 
 	return validate.Success()
@@ -283,7 +283,7 @@ func (input *EditComment) Validate(ctx context.Context, user *models.User) *vali
 	result := validate.Success()
 
 	if input.Model.Content == "" {
-		result.AddFieldFailure("content", "Comment is required.")
+		result.AddFieldFailure("content", "Kommentar ist erforderlich.")
 	}
 
 	if len(input.Model.Attachments) > 0 {

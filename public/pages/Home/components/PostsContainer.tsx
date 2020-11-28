@@ -132,12 +132,12 @@ export class PostsContainer extends React.Component<PostsContainerProps, PostsCo
         <ListPosts
           posts={this.state.posts}
           tags={this.props.tags}
-          emptyText={"No results matched your search, try something different."}
+          emptyText={"Keine Ergebnisse stimmen mit deiner Suche überein."}
         />
         {this.state.loading && <Loader />}
         {showMoreLink && (
           <a href={showMoreLink} className="c-post-list-show-more" onTouchEnd={this.showMore} onClick={this.showMore}>
-            View more posts
+            Weitere Beiträge anzeigen
           </a>
         )}
       </>

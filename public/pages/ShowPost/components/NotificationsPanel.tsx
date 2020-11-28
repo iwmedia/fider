@@ -38,9 +38,9 @@ export const NotificationsPanel = (props: NotificationsPanelProps) => {
   );
 
   const text = subscribed ? (
-    <span className="info">You’re receiving notifications about activity on this post.</span>
+    <span className="info">Du erhältst Benachrichtigungen über Aktivitäten in diesem Beitrag.</span>
   ) : (
-    <span className="info">You'll not receive any notification about this post.</span>
+    <span className="info">Du erhältst keine Benachrichtigung über diesen Beitrag.</span>
   );
 
   return (

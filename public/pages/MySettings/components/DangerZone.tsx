@@ -29,7 +29,7 @@ export class DangerZone extends React.Component<{}, DangerZoneState> {
       e.preventEnable();
       navigator.goHome();
     } else {
-      notify.error("Failed to delete your account. Try again later");
+      notify.error("Ein Fehler ist aufgetreten. Versuchen Sie es später.");
     }
   };
 
@@ -40,31 +40,31 @@ export class DangerZone extends React.Component<{}, DangerZoneState> {
           <Modal.Header>Delete account</Modal.Header>
           <Modal.Content>
             <p>
-              When you choose to delete your account, we will erase all your personal information forever. The content
-              you have published will remain, but it will be anonymised.
+              Wenn Sie Ihr Konto löschen, werden alle Ihre persönlichen Daten für immer gelöscht.
+              Der von Ihnen veröffentlichte Inhalt bleibt erhalten, wird jedoch anonymisiert.
             </p>
             <p>
-              This process is irreversible. <strong>Are you sure?</strong>
+              Dieser Prozess ist nicht rückgängig zu machen. <strong>Bist du dir sicher?</strong>
             </p>
           </Modal.Content>
           <Modal.Footer>
             <Button color="danger" size="tiny" onClick={this.onConfirm}>
-              Confirm
+              Bestätigen
             </Button>
             <Button color="cancel" size="tiny" onClick={this.onCancel}>
-              Cancel
+              Abbrechen
             </Button>
           </Modal.Footer>
         </Modal.Window>
 
-        <h4>Delete account</h4>
+        <h4>Account löschen</h4>
         <p className="info">
-          When you choose to delete your account, we will erase all your personal information forever. The content you
-          have published will remain, but it will be anonymised.
+              Wenn Sie Ihr Konto löschen, werden alle Ihre persönlichen Daten für immer gelöscht.
+              Der von Ihnen veröffentlichte Inhalt bleibt erhalten, wird jedoch anonymisiert.
         </p>
         <p className="info">This process is irreversible. Please be certain.</p>
         <Button color="danger" size="tiny" onClick={this.onClickDelete}>
-          Delete My Account
+          Lösche mein Account
         </Button>
       </div>
     );

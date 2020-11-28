@@ -34,8 +34,8 @@ export const SignInControl: React.FunctionComponent<SignInControlProps> = props 
   if (!isCookieEnabled()) {
     return (
       <Message type="error">
-        <h3>Cookies Required</h3>
-        <p>Cookies are not enabled on your browser. Please enable cookies in your browser preferences to continue.</p>
+        <h3>Cookies werden benötigt</h3>
+        <p>Cookies sind in Ihrem Browser nicht aktiviert. Bitte aktivieren Sie Cookies in Ihren Browsereinstellungen, um fortzufahren.</p>
       </Message>
     );
   }
@@ -58,7 +58,7 @@ export const SignInControl: React.FunctionComponent<SignInControlProps> = props 
               </React.Fragment>
             ))}
           </div>
-          <p className="info">We will never post to these accounts on your behalf.</p>
+          <p className="info">Wir werden niemals auf dieses Konto unter deinem Namen etwas posten</p>
         </div>
       )}
 
@@ -66,17 +66,17 @@ export const SignInControl: React.FunctionComponent<SignInControlProps> = props 
 
       {props.useEmail && (
         <div className="l-signin-email">
-          <p>Enter your email address to sign in</p>
+          <p>Gebe deine E-Mail-Adresse ein, um dich anzumelden</p>
           <Form error={error}>
             <Input
               field="email"
               value={email}
               autoFocus={!device.isTouch()}
               onChange={setEmail}
-              placeholder="yourname@example.com"
+              placeholder="deinName@beispiel.com"
               suffix={
                 <Button type="submit" color="positive" disabled={email === ""} onClick={signIn}>
-                  Sign in
+                  Anmelden
                 </Button>
               }
             />

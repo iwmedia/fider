@@ -59,7 +59,7 @@ export default class MyNotificationsPage extends React.Component<MyNotifications
   public render() {
     return (
       <div id="p-my-notifications" className="page container">
-        <Heading title="Notifications" subtitle="Stay up to date with what's happening" icon={FaBell} />
+        <Heading title="Notifications" subtitle="Bleib auf dem Laufenden" icon={FaBell} />
 
         <h4>
           Unread
@@ -75,7 +75,7 @@ export default class MyNotificationsPage extends React.Component<MyNotifications
         </List>
         {this.state.recent.length > 0 && (
           <>
-            <h4>Read on last 30 days</h4>
+            <h4>Gelesen in den letzten 30 Tagen</h4>
             <List>
               <ListItem>{this.items(this.state.recent)}</ListItem>
             </List>
