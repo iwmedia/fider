@@ -44,7 +44,7 @@ export default class CompleteSignInProfilePage extends React.Component<HomePageP
         <Modal.Window canClose={false} isOpen={true} onClose={this.noop}>
           <Modal.Header>Vervollständige dein Profil</Modal.Header>
           <Modal.Content>
-            <p>Da dies deine erste Anmeldung ist, geben bitte dein Namen ein.</p>
+            <p>Bitte nenne uns dein Name.</p>
             <Form error={this.state.error}>
               <Input
                 field="name"

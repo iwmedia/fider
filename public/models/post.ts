@@ -26,7 +26,7 @@ export class PostStatus {
   ) {}
 
   public static Open = new PostStatus("Offen", "open", false, false, false);
-  public static Planned = new PostStatus("Geplannt", "planned", true, false, true);
+  public static Planned = new PostStatus("Geplant", "planned", true, false, true);
   public static Started = new PostStatus("Gestartet", "started", true, false, true);
   public static Completed = new PostStatus("Abgeschlossen", "completed", true, true, true);
   public static Declined = new PostStatus("Abgelehnt", "declined", true, true, true);
