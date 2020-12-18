@@ -65,7 +65,7 @@ export default class MyNotificationsPage extends React.Component<MyNotifications
           Unread
           {this.state.unread.length > 0 && (
             <span className="mark-as-read" onClick={this.markAllAsRead}>
-              Mark All as Read
+              Alles als gelesen markieren
             </span>
           )}
         </h4>

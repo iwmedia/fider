@@ -39,7 +39,7 @@ export class TagsFilter extends React.Component<TagsFilterProps, TagsFilterState
   private renderText = () => {
     const text =
       this.state.selected.length === 0
-        ? "any tag"
+        ? "alle tags"
         : this.state.selected.length === 1
         ? "1 tag"
         : `${this.state.selected.length} tags`;
